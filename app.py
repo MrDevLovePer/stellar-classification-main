@@ -19,10 +19,10 @@ def predict():
 
     if request.method == 'POST':
         scalar = StandardScaler()
-        scalerfile = os.getcwd()+'\\scalar.sav'
+        scalerfile = 'scalar.sav'
         scalar = pickle.load(open(scalerfile, 'rb'))
 
-        model = pickle.load(open(os.getcwd()+'\\finalized_model.sav', 'rb'))
+        model = pickle.load(open('finalized_model.sav', 'rb'))
 
 
         alpha = float(request.form['alpha'])
